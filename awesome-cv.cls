@@ -489,7 +489,7 @@
       \ifthenelse{\isundefined{\@mobile}}%
         {}%
         {%
-          \href{\@teluri}{\tagmcbegin{tag=Span,actualtext=Mobile:}\faMobile\tagmcend\acvHeaderIconSep\@mobile}%
+          \href{\@teluri}{\tagmcbegin{tag=Span,actualtext={Mobile: }}\faMobile\acvHeaderIconSep\tagmcend\@mobile}%
           \setbool{isstart}{false}%
         }%
       \ifthenelse{\isundefined{\@email}}%
