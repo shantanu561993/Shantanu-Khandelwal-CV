@@ -1,0 +1,38 @@
+name: Build CV PDF
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Compile
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: resume.tex
+          latexmk_use_lualatex: true
+
+      - name: Rename artifact
+        run: mv resume.pdf Shantanu_Khandelwal_CV.pdf
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Shantanu_Khandelwal_CV
+          path: Shantanu_Khandelwal_CV.pdf
+
+      - name: Attach to release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: Shantanu_Khandelwal_CV.pdf
+          generate_release_notes: true

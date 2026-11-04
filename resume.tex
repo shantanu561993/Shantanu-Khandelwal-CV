@@ -1,0 +1,131 @@
+%!TEX TS-program = luahbtex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+\DocumentMetadata{
+  lang=en,
+  pdfversion=1.7,
+  tagging=on,
+}
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Machine-readability: document metadata for parsers/AI ingestion
+\hypersetup{
+  pdftitle={Shantanu Khandelwal - Curriculum Vitae},
+  pdfauthor={Shantanu Khandelwal},
+  pdfsubject={Cybersecurity Leadership CV - AI Red Teaming, Offensive Security, Vulnerability Management},
+  pdfkeywords={AI Red Teaming, Red Team, Purple Team, Penetration Testing, Vulnerability Management, MITRE ATT and CK, AWS, Azure, GCP, CISSP, OSEP, OSCP, CRTO, Singapore},
+}
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-red}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{false}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+%
+%
+% Invisible expansion: visible acronym, "ACRO (full name)" in the extraction layer
+\newcommand{\at}[2]{\tagmcbegin{tag=Span,actualtext={#1 (#2)}}#1\tagmcend}
+\newcommand{\cvsep}{\tagmcbegin{tag=Span,actualtext=|}\textbullet\tagmcend}
+\newcommand{\skillrow}[2]{%
+  \noindent\hangindent=5.8cm\hangafter=1
+  \makebox[5.8cm][l]{\skilltypestyle{#1}}%
+  \skillsetstyle{#2}\par\vspace{0.5mm}%
+}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\emergencystretch=1.5em
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+% \photo[rectangle,edge,right]{./examples/profile}
+\name{Shantanu}{Khandelwal}
+\address{OffSec AI Red Teamer (OSAI) · \at{CISSP}{Certified Information Systems Security Professional} · \at{OSEP}{Offensive Security Experienced Professional} · \at{OSCE}{Offensive Security Certified Expert} · \at{OSCP}{Offensive Security Certified Professional} · \at{OSDA}{Offensive Security Defense Analyst} · \at{GPEN}{GIAC Penetration Tester} · \at{GXPN}{GIAC Exploit Researcher and Advanced Penetration Tester} · \at{CREST CPSA}{CREST Practitioner Security Analyst} · \at{CRTO}{Zero Point Security Certified Red Team Operator}}
+\position{Senior Cybersecurity Leader{\enskip\textperiodcentered\enskip}Application Security \& Vulnerability Management Leader{\enskip\textperiodcentered\enskip}Red \& Purple team Strategist}
+
+
+\mobile{(+65) 8732-1741}
+\email{shantanukhandelwal@protonmail.com}
+\homepage{www.redteam.cafe}
+\github{shantanu561993}
+\linkedin{KhandelwalShantanu}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \medium{madium-id}
+% \googlescholar{googlescholar-id}{name-to-display}
+%% \firstname and \lastname will be used
+% \googlescholar{googlescholar-id}{}
+% \extrainfo{extra informations}
+%\quote{``Be the change that you want to see in the world."}
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[C]
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {\today}
+  {Shantanu Khandelwal~~~·~~~Résumé}
+  {\thepage}
+
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%-------------------------------------------------------------------------------
+\input{resume/summary.tex}
+\input{resume/skills.tex}
+\input{resume/experience.tex}
+\input{resume/certifications.tex}
+%\input{resume/ProjectsAndTools.tex}
+%\input{resume/writing.tex}
+%\input{resume/committees.tex}
+\input{resume/education.tex}
+%\input{resume/extracurricular.tex}
+
+%-------------------------------------------------------------------------------
+\end{document}

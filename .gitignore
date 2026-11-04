@@ -1,0 +1,21 @@
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.spl
+*.synctex.gz
+*.toc
+*.xdv
+
+# Compiled PDFs (CI attaches them to releases)
+*.pdf
+
+# Editor / OS cruft
+.DS_Store
+Thumbs.db
+*.html
+
