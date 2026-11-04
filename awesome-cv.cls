@@ -509,13 +509,13 @@
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{http://\@homepage}{\tagmcbegin{tag=Span,actualtext=Website:}\faHouseChimney\tagmcend\acvHeaderIconSep\@homepage}%
+          \href{http://\@homepage}{\tagmcbegin{tag=Span,actualtext={Website: https://}}\faHouseChimney\acvHeaderIconSep\tagmcend\@homepage}%
         }%
       \ifthenelse{\isundefined{\@github}}%
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://github.com/\@github}{\tagmcbegin{tag=Span,actualtext=GitHub:}\faSquareGithub\tagmcend\acvHeaderIconSep\@github}%
+          \href{https://github.com/\@github}{\tagmcbegin{tag=Span,actualtext={GitHub: https://github.com/}}\faSquareGithub\acvHeaderIconSep\tagmcend\@github}%
         }%
       \ifthenelse{\isundefined{\@gitlab}}%
         {}%
@@ -539,7 +539,7 @@
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://www.linkedin.com/in/\@linkedin}{\tagmcbegin{tag=Span,actualtext=LinkedIn:}\faLinkedin\tagmcend\acvHeaderIconSep\@linkedin}%
+          \href{https://www.linkedin.com/in/\@linkedin}{\tagmcbegin{tag=Span,actualtext={LinkedIn: https://www.linkedin.com/in/}}\faLinkedin\acvHeaderIconSep\tagmcend\@linkedin}%
         }%
       \ifthenelse{\isundefined{\@orcid}}%
         {}%
